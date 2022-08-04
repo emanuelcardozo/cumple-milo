@@ -1,0 +1,18 @@
+const express = require('express');
+const app = express();
+const path = require('path');
+const port = process.env.port || 3000
+
+app.set('view engine', 'ejs')
+
+app.use(express.static("public"));
+
+app.get('/',function(req,res){
+  const name = req.query.name || "de 16 a 19hs"
+  console.log(req.query)
+  res.render('index.ejs', { name })
+});
+
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
+});

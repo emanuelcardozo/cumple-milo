@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
+@font-face {font-family: "Sonic Comics"; src: url("//db.onlinewebfonts.com/t/5aacad927bc55ebab2c65282795d1b1d.eot"); src: url("//db.onlinewebfonts.com/t/5aacad927bc55ebab2c65282795d1b1d.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/5aacad927bc55ebab2c65282795d1b1d.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/5aacad927bc55ebab2c65282795d1b1d.woff") format("woff"), url("//db.onlinewebfonts.com/t/5aacad927bc55ebab2c65282795d1b1d.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/5aacad927bc55ebab2c65282795d1b1d.svg#Sonic Comics") format("svg"); }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: arial;
+  color: white;
+  font-family: "Sonic Comics", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  text-align: center;
+}
+
+.content {
+  width: 480px;
+  height: 640px;
+  padding: 20px;
+  
+  background-image: url('./sonic.jpg');
+  
+  display: grid;
+  grid-template-rows: 80px auto 100px;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:  'title title'
+                        'date .'
+                        'buttons buttons';
+}
+
+.title_section {
+  grid-area: title;
+  border-color: black;
+  padding: 10px;
+  height: fit-content;
+  position: relative;
+}
+
+.title_section h1 {
+  font-size: 48px;
+  margin-left: -30px;
+}
+
+.title_section h1 span {
+  position: absolute;
+  font-size: 150px;
+  right: -15px;
+  top: -20px;
+
+  text-shadow: 10px 10px 10px rgb(0 0 100 / 75%), 10px 10px 10px rgb(0 0 50 / 50%);
+}
+
+.date_section {
+  grid-area: date;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  
+  margin-bottom: 20px;
+}
+
+.date_section .container {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  flex-direction: column;
+  border-color: black;
+}
+
+.date_section .day {
+  font-size: 30px;
+}
+
+.buttons_section {
+  text-align: left;
+  padding: 5px;
+  grid-area: buttons;
+
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.button{
+  position:relative;
+  display:inline-block;
+}
+
+.button a{
+  color:white;
+  font-weight:bold;
+  font-size:24px;
+  text-align: center;
+  text-decoration:none;
+  background-color:#0eade6;
+  display:block;
+  position:relative;
+  padding:10px;
+  
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+  
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #004a91;
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #004a91;
+  box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #004a91;
+  
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.button a:active{
+  top:10px;
+  background-color:#0088f7;
+  
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #001d91;
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #001d91;
+  box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #001d91;
+}
+
+.button:after{
+  content:"";
+  height:100%;
+  width:100%;
+  padding:4px;
+  position: absolute;
+  bottom:-15px;
+  left:-4px;
+  z-index:-1;
+  background-color:#2B1800;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+legend {
+  margin: 0 10px;
+  padding: 0 10px;
+}
+
+fieldset {
+  background: rgb(0,0,0,0.75);
+  box-shadow: 10px 10px 10px rgb(0 0 100 / 75%), 10px 10px 10px rgb(0 0 50 / 50%);
+}
+.name_container {
+  display: flex;
+}
+
+.name {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 48px;
+  font-family: "Sonic Comics", Helvetica, sans-serif;
+}
