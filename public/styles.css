@@ -26,11 +26,13 @@ body {
 }
 
 .content {
-  width: 480px;
-  height: 640px;
+  width: 100%;
+  height: 100%;
   padding: 20px;
   
   background-image: url('./sonic.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   
   display: grid;
   grid-template-rows: 80px auto 100px;
