@@ -13,6 +13,14 @@ app.get('/',function(req,res){
   res.render('index.ejs', { name })
 });
 
+app.get('/lax.min.js', function(req, res) {
+  res.sendFile(__dirname + '/node_modules/lax.js/lib/lax.min.js');
+});
+
+app.get('/js/main.js', function(req, res) {
+  res.sendFile(__dirname + '/js/main.js');
+});
+
 server.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
