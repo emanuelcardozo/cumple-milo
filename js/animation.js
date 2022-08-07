@@ -1,7 +1,7 @@
 window.onload = function() {
-  window.addEventListener('scroll', e => {
-    console.log(window.scrollY)
-  })
+  document.getElementById("content").style.display = "block";
+  document.getElementById("loading").style.display = "none";
+
 
   lax.init()
 
