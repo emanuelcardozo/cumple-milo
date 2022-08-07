@@ -9,8 +9,7 @@ app.set('view engine', 'ejs')
 app.use(express.static("public"));
 
 app.get('/old',function(req,res){
-  const name = req.query.name || "de 16 a 19hs"
-  res.render('index.ejs', { name })
+  res.render('v1.ejs')
 });
 
 app.get('/',function(req,res){
@@ -21,15 +20,15 @@ app.get('/',function(req,res){
   const whatsappConfirmLink = `https://wa.me/+540${phone}/?text=${confirmMessage}`
   const whatsappCancelLink = `https://wa.me/+540${phone}/?text=${cancelMessage}`
 
-  res.render('new.ejs', { name, whatsappConfirmLink, whatsappCancelLink })
+  res.render('v2.ejs', { name, whatsappConfirmLink, whatsappCancelLink })
 });
 
 app.get('/lax.min.js', function(req, res) {
   res.sendFile(__dirname + '/node_modules/lax.js/lib/lax.min.js');
 });
 
-app.get('/js/main.js', function(req, res) {
-  res.sendFile(__dirname + '/js/main.js');
+app.get('/js/animation.js', function(req, res) {
+  res.sendFile(__dirname + '/js/animation.js');
 });
 
 server.listen(port, () => {

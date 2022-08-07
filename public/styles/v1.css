@@ -30,7 +30,7 @@ body {
   height: 120vh;
   padding: 20px;
   
-  background-image: url('./sonic.jpg');
+  background-image: url('/img/sonicV1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   
