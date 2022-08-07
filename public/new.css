@@ -1,0 +1,183 @@
+@import url(//db.onlinewebfonts.com/c/9b0964139986315b27f7bf29c5a9c53a?family=NiseSonic);
+
+@font-face {font-family: "NiseSonic"; src: url("//db.onlinewebfonts.com/t/9b0964139986315b27f7bf29c5a9c53a.eot"); src: url("//db.onlinewebfonts.com/t/9b0964139986315b27f7bf29c5a9c53a.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/9b0964139986315b27f7bf29c5a9c53a.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/9b0964139986315b27f7bf29c5a9c53a.woff") format("woff"), url("//db.onlinewebfonts.com/t/9b0964139986315b27f7bf29c5a9c53a.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/9b0964139986315b27f7bf29c5a9c53a.svg#NiseSonic") format("svg"); }
+
+:root {
+  --yellow: rgb(165, 165, 27);
+  --blue: rgb(27, 42, 159);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  color: white;
+  font-family: "NiseSonic", helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  background-color: black;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.background {
+  width: 100%;
+  height: 100vh;
+  background: rgb(166,255,253);
+  background: radial-gradient(circle, rgba(166,255,253,1) 0%, rgba(76,87,255,1) 100%);;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+
+.slide {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.slide:nth-child(even) {
+  transform: scaleX(-1);
+}
+
+.slide.main .slide_down {
+  width: 100%;
+  font-size: 1em;
+  text-align: center;
+  position: absolute;
+  bottom: 10em;
+  left: 1em;
+  animation: intermitent 3s ease-in-out infinite;
+
+  text-shadow: 2px 2px 0 black;
+}
+
+@keyframes intermitent {
+  0% { opacity: 0 }
+  50% { opacity: 1 }
+  100% { opacity: 0 }
+}
+
+.logo {
+  max-width: 100%;
+  position: absolute;
+}
+
+.name {
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.title, .subtitle {
+  color: transparent;  
+}
+
+.title {
+  font-size: 5em;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--blue);
+
+  background: rgb(247,255,0);
+  background: linear-gradient(0deg, rgba(247,255,0,1) 0%, rgba(175,135,20,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 2em;
+  letter-spacing: 0.1em;
+  padding: .25em;
+  color: white;
+  text-shadow: 2px 2px black;
+  letter-spacing: 0.2em;
+
+  background: rgb(98,16,16);
+  background: linear-gradient(0deg, rgba(98,16,16,1) 0%, rgba(231,39,39,1) 100%);
+}
+
+.character {
+  max-width: 100%;
+  max-height: 100vh;
+}
+
+.dialog_container {
+  position: absolute;
+  top: -240px;
+  right: -180px;
+  transform: scale(-.5, .75);
+  z-index: 10;
+}
+
+.dialog {
+  position: relative;
+  z-index: 10;
+}
+
+.dialog .text {
+  width: 60%;
+  height: 20%;
+  color: black;
+  font-size: 2em;
+  position: absolute;
+  top: 35%;
+  left: 20%;
+}
+
+.slide:nth-child(odd) .dialog .text {
+  transform: scaleX(-1);
+}
+
+.button_container {
+  position: absolute;
+  bottom: 1em;
+  width: 80%;
+}
+
+.button_container .pos {
+  height: 6em;
+  position: relative;
+  padding: 2em 1em;
+}
+
+.button {
+  padding: .5em 1em;
+  margin: 0.5em;
+  border-radius: 0.5em;
+  box-shadow: 2px 2px #aa7272;
+  text-decoration: none;
+
+  animation: floating 2s linear infinite;
+  position: absolute;
+}
+
+.confirm {
+  left: 0;
+}
+
+.cancel {
+  animation-delay: -1s;
+  right: 0;
+}
+
+strong {
+  color: red
+}
+
+@keyframes floating {
+  0% { top: 5px }
+  50% { top: -5px }
+  100% { top: 5px }
+}

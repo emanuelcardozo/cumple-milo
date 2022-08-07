@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi cumple 3</title>
+
+  <link rel="stylesheet" href="/new.css">
+  <link href="//db.onlinewebfonts.com/c/5aacad927bc55ebab2c65282795d1b1d?family=Sonic+Comics" rel="stylesheet" type="text/css"/>
+  <link href="//db.onlinewebfonts.com/c/9b0964139986315b27f7bf29c5a9c53a?family=NiseSonic" rel="stylesheet" type="text/css"/>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/lax.min.js"></script>
+</head>
+<body>
+  <div class="slide main">
+    <img class="logo" src="img/logo.png" alt="logo" />
+    <div class="name">
+      <div class="title">Milo</div>
+      <div class="subtitle">Alexander</div>
+    </div>
+    <p class="slide_down">Desliza hacia abajo lentamente...</p>
+  </div>
+  <div class="slide">
+    <img class="character sonic" src="img/sonic.png" alt="sonic" />
+    <div class="dialog_container">
+      <div class="dialog">
+        <img src="img/dialog.png" alt="dialog" />
+        <p class="text">
+          Hola <strong><%= name %>!</strong><br/>tenemos una gran noticia para compartirte...
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="slide">
+    <img class="character tails" src="img/tails.png" alt="tails" />
+    <div class="dialog_container">
+      <div class="dialog">
+        <img src="img/dialog.png" alt="dialog" />
+        <p class="text">El <strong>sabado 1 de Octubre</strong> MILO va a cumplir 3...</p>
+      </div>
+    </div>
+  </div>
+  <div class="slide">
+    <img class="character amy" src="img/amy.png" alt="amy" />
+    <div class="dialog_container">
+      <div class="dialog">
+        <img src="img/dialog.png" alt="dialog" />
+        <p class="text">Y desea que de <strong>16 a 19hs</strong> lo festejes junto a su familia...</p>
+      </div>
+    </div>
+  </div>
+  <div class="slide">
+    <img class="character knuckles" src="img/knuckles.png" alt="knuckles" />
+    <div class="dialog_container">
+      <div class="dialog">
+        <img src="img/dialog.png" alt="dialog" />
+        <p class="text">En Hipolito Bouchard 1268, Rafael Castillo <a href="https://www.google.com/maps/place/Hip%C3%B3lito+Bouchard+1268,+B1755BUZ+Rafael+Castillo,+Provincia+de+Buenos+Aires/@-34.693285,-58.6297275,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcc6dc196628c9:0xbac52af12fade9b9!8m2!3d-34.6932894!4d-58.6275335"><strong>(aqui)</strong></a>...</p>
+      </div>
+    </div>
+  </div>
+  <div class="slide">
+    <img class="character silver" src="img/silver.png" alt="silver" />
+    <div class="dialog_container">
+      <div class="dialog">
+        <img src="img/dialog.png" alt="dialog" />
+        <p class="text">Pero hay algo mas, necesitamos que confirmes tu asistencia...</p>
+      </div>
+    </div>
+  </div>
+  <div class="slide">
+    <img class="character shadow" src="img/shadow.png" alt="shadow" />
+    <div class="dialog_container">
+      <div class="dialog">
+        <img src="img/dialog.png" alt="dialog" />
+        <p class="text">
+          Vas a formar parte de este momento?
+        </p>
+      </div>
+    </div>
+    <div class="button_container">
+      <div class="pos">
+        <a class="button subtitle confirm" href="<%= whatsappConfirmLink %>">Si</a>
+        <a class="button subtitle cancel" href="<%= whatsappCancelLink %>">No</a>
+      </div>
+    </div>
+  </div>
+  <div class="background"></div>
+  <script src="/js/main.js"></script>
+</body>
+</html>
