@@ -20,10 +20,10 @@ window.onload = function() {
 
   lax.addElements('.slide .character', {
     scrollY: {
-      opacity: [
-        ['elInY', 'elCenterY'],
-        [0, 1]
-      ],
+      // opacity: [
+      //   ['elInY', 'elCenterY'],
+      //   [0, 1]
+      // ],
       translateX: [
         ['elInY', 'elCenterY'],
         [0, 150]

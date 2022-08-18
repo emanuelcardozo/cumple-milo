@@ -45,6 +45,13 @@ body {
   position: fixed;
   top: 0;
   z-index: -1;
+  opacity: 0.25;
+}
+
+.background img {
+  position: fixed;
+  right: -10%;
+  height: 100vh;
 }
 
 .slide {
@@ -124,6 +131,30 @@ body {
   max-height: 90vh;
 }
 
+.slide:nth-child(even) .bar {
+  position: absolute;
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid red;
+  border-bottom: 50vh solid red;
+  border-top: 50vh solid transparent;
+  opacity: .5;
+}
+
+.slide:nth-child(odd) .bar {
+  position: absolute;
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid red;
+  border-bottom: 50vh solid transparent;
+  border-top: 50vh solid red;
+  opacity: .5;
+}
+
+.dialog_container::after {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
 .dialog_container {
   position: absolute;
   top: -240px;
@@ -158,16 +189,19 @@ body {
 }
 
 .button_container {
-  position: absolute;
+  width: 100%;
+  position: inherit;
   bottom: 1em;
-  width: 80%;
-  max-width: 20em;
+  display: flex;
+  justify-content: center;
 }
 
 .button_container .pos {
+  flex: 1;
   height: 6em;
   position: relative;
   padding: 2em 1em;
+  max-width: 20em;
 }
 
 .button {
