@@ -7,7 +7,7 @@ window.onload = function() {
 
   lax.addDriver('scrollY', function () {
     return window.scrollY;
-  })
+  }, { inertiaEnabled: true })
 
   lax.addElements('.slide .name', {
     scrollY: {
@@ -20,13 +20,10 @@ window.onload = function() {
 
   lax.addElements('.slide .character', {
     scrollY: {
-      // opacity: [
-      //   ['elInY', 'elCenterY'],
-      //   [0, 1]
-      // ],
       translateX: [
         ['elInY', 'elCenterY'],
-        [0, 150]
+        [0, 150],
+        { inertia: 2 }
       ]
     }
   })
