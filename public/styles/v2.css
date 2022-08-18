@@ -38,8 +38,6 @@ body {
 }
 
 .background {
-  width: 100%;
-  height: 100vh;
   background: rgb(166,255,253);
   background: radial-gradient(circle, rgba(166,255,253,1) 0%, rgba(76,87,255,1) 100%);;
   position: fixed;
@@ -49,9 +47,10 @@ body {
 }
 
 .background img {
+  width: auto;
+  height: 100vh;
   position: fixed;
   right: -10%;
-  height: 100vh;
 }
 
 .slide {
@@ -163,12 +162,6 @@ body {
   z-index: 10;
 }
 
-@media screen and (min-width: 600px) {
-  .dialog_container {
-    right: 180px;
-  }
-}
-
 .dialog {
   position: relative;
   z-index: 10;
@@ -232,4 +225,22 @@ strong {
   0% { top: 5px }
   50% { top: -5px }
   100% { top: 5px }
+}
+
+@media screen and (min-width: 600px) {
+  .dialog_container {
+    right: 400px;
+  }
+
+  .slide.main .slide_down {
+    width: 100%;
+  }
+
+  .background img {
+    right: 0;
+  }
+
+  .button {
+    margin: .25em;
+  }
 }
