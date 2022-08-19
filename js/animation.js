@@ -2,38 +2,21 @@ window.onload = function() {
   document.getElementById("content").style.display = "block";
   document.getElementById("loading").style.display = "none";
 
+  const slides = document.getElementsByClassName("slide")
 
-  lax.init()
-
-  lax.addDriver('scrollY', function () {
-    return window.scrollY;
-  }, { inertiaEnabled: true })
-
-  lax.addElements('.slide .name', {
-    scrollY: {
-      scale: [
-        ['elInY', 'elOutY'],
-        [.25, 1.5]
-      ]
-    }
-  })
-
-  lax.addElements('.slide .character', {
-    scrollY: {
-      translateX: [
-        ['elInY', 'elCenterY'],
-        [0, 150],
-        { inertia: 2 }
-      ]
-    }
-  })
-
-  lax.addElements('.slide .dialog', {
-    scrollY: {
-      opacity: [
-        ['elInY', 'elCenterY'],
-        [0, 1]
-      ],
-    }
-  })
+  const observer = new IntersectionObserver(slides => {
+    slides.forEach(entry => {
+      const slide = entry.target
+      console.log({ entry, slide: slide.querySelector('.character') })
+  
+      if (entry.isIntersecting) {
+        slide.classList.add('motion');
+        return;
+      }
+  
+      slide.classList.remove('motion');
+    });
+  });
+  
+  Array.from(slides).forEach((slide) => observer.observe(slide));
 }
