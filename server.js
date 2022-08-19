@@ -13,7 +13,7 @@ app.get('/old',function(req,res){
 });
 
 app.get('/',function(req,res){
-  const { name="Amiguit@", family } = req.query
+  const { name="Amiguit@", family="Ema" } = req.query
   const phone = family && family === "Carla" ? process.env.PHONE_CARLA : process.env.PHONE_EMA
   const confirmMessage = encodeURIComponent(`Genial! Contá conmigo ${family}.`)
   const cancelMessage = encodeURIComponent(`Gracias ${family}, pero no puedo ir.`)
