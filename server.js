@@ -20,7 +20,7 @@ app.get('/',function(req,res){
   const whatsappConfirmLink = `https://wa.me/+540${phone}/?text=${confirmMessage}`
   const whatsappCancelLink = `https://wa.me/+540${phone}/?text=${cancelMessage}`
 
-  res.render('v2.ejs', { name, whatsappConfirmLink, whatsappCancelLink })
+  res.render('v3.ejs', { name, whatsappConfirmLink, whatsappCancelLink })
 });
 
 app.get('/lax.min.js', function(req, res) {

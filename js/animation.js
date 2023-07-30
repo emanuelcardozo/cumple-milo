@@ -7,7 +7,6 @@ window.onload = function() {
   const observer = new IntersectionObserver(slides => {
     slides.forEach(entry => {
       const slide = entry.target
-      console.log({ entry, slide: slide.querySelector('.character') })
   
       if (entry.isIntersecting) {
         slide.classList.add('motion');

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi cumple 4</title>
+
+  <link rel="stylesheet" href="styles/v3.css">
+  <!-- <link href="//db.onlinewebfonts.com/c/9b0964139986315b27f7bf29c5a9c53a?family=NiseSonic" rel="stylesheet" type="text/css"/> -->
+</head>
+<body>
+  <div id="loading">Cargando...</div>
+  <div id="landscape">Utiliza el dispositivo verticalmente para ver el contenido...</div>
+  <div id="content" style="display:none">
+    <div class="slide main" id="ema">
+      <!-- <img class="logo" src="img/logo.png" alt="logo" /> -->
+      <div class="name">
+        <div class="title">
+          <span style='background-color: red; z-index: 4;'>M</span>
+          <span style='background-color: green; z-index: 3;'>i</span>
+          <span style='background-color: yellow; z-index: 2;'>l</span>
+          <span style='background-color: blue; z-index: 1;'>o</span>
+        </div>
+        <div class="subtitle">
+          <span style='background-color: red; z-index: 9;'>A</span>
+          <span style='background-color: green; z-index: 8;'>l</span>
+          <span style='background-color: yellow; z-index: 7;'>e</span>
+          <span style='background-color: blue; z-index: 6;'>x</span>
+          <span style='background-color: red; z-index: 5;'>a</span>
+          <span style='background-color: green; z-index: 4;'>n</span>
+          <span style='background-color: yellow; z-index: 3;'>d</span>
+          <span style='background-color: blue; z-index: 2;'>e</span>
+          <span style='background-color: red; z-index: 1;'>r</span>
+        </div>
+      </div>
+      <p class="slide_down">Desliza hacia abajo lentamente...</p>
+    </div>
+    <div class="slide">
+      <div class="bar"></div>
+      <img class="character sonic" src="img/Peach.png" alt="sonic" />
+      <div class="dialog_container">
+        <div class="dialog">
+          <img src="img/dialog.png" alt="dialog" />
+          <p class="text">
+            Hola <strong><%= name %>!</strong><br/>tenemos una gran noticia para compartirte...
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="bar"></div>
+      <img class="character turtle" src="img/Turtle&Cloud.png" alt="tails" />
+      <div class="dialog_container">
+        <div class="dialog">
+          <img src="img/dialog.png" alt="dialog" />
+          <p class="text">El <strong>sabado 1 de Octubre</strong> MILO va a cumplir 3...</p>
+        </div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="bar"></div>
+      <img class="character amy" src="img/Bowser.png" alt="amy" />
+      <div class="dialog_container">
+        <div class="dialog">
+          <img src="img/dialog.png" alt="dialog" />
+          <p class="text">Y desea que de <strong>16 a 19hs</strong> lo festejes junto a su familia...</p>
+        </div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="bar"></div>
+      <img class="character knuckles" src="img/Donkeykong.png" alt="knuckles" />
+      <div class="dialog_container">
+        <div class="dialog">
+          <img src="img/dialog.png" alt="dialog" />
+          <p class="text">En Hipolito Bouchard 1268, Rafael Castillo <a href="https://www.google.com/maps/place/Hip%C3%B3lito+Bouchard+1268,+B1755BUZ+Rafael+Castillo,+Provincia+de+Buenos+Aires/@-34.693285,-58.6297275,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcc6dc196628c9:0xbac52af12fade9b9!8m2!3d-34.6932894!4d-58.6275335"><strong>(aqui)</strong></a>...</p>
+        </div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="bar"></div>
+      <img class="character silver" src="img/Luigi&Toad.png" alt="silver" />
+      <div class="dialog_container">
+        <div class="dialog">
+          <img src="img/dialog.png" alt="dialog" />
+          <p class="text">Pero hay algo mas, necesitamos que confirmes tu asistencia...</p>
+        </div>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="bar"></div>
+      <img class="character mario" src="img/Mario&Yoshi.png" alt="shadow" />
+      <div class="dialog_container">
+        <div class="dialog">
+          <img src="img/dialog.png" alt="dialog" />
+          <p class="text">
+            Vas a formar parte de este momento?
+          </p>
+        </div>
+      </div>
+      <div class="button_container">
+        <div class="pos">
+          <a class="button subtitle confirm" href="<%= whatsappConfirmLink %>">Si</a>
+          <a class="button subtitle cancel" href="<%= whatsappCancelLink %>">No</a>
+        </div>
+      </div>
+    </div>
+    <div class="background">
+      <img src="img/background.gif" alt="background" />
+    </div>    
+  </div>
+  <script src="/js/animation.js"></script>
+</body>
+</html>
